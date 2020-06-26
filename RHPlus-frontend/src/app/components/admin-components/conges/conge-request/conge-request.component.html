@@ -1,0 +1,119 @@
+
+<div class="container" >
+
+   
+
+
+<div class="left"> 
+    <img src="http://localhost:8080/avatar/{{conge.user.idUser}}" alt="user" width="150" class="img-circle">
+    <br>
+    <br>
+    <h4>{{employe.prenom}} {{employe.nom}} </h4>
+    <p>{{employe.fonction}}</p>
+
+  </div>
+
+<div class="right">
+    <h5><i class="fa fa-angle-right"></i> Request for a vacation</h5>
+    <br>
+    <br>
+    <div class="info">
+          
+      <div class="info_data">
+            <div class="data">
+              <h4>Period <p> {{conge.duree}}</p> </h4>
+          </div>
+          <div class="data">
+            <h4>Type of vacation
+            <p> {{conge.typeCong}}</p> </h4>
+        </div>
+      </div>
+      <div class="info_data">
+          <div class="data">
+            <h4>Start day</h4>
+            <p> {{conge.debutCong}}</p>
+        </div>
+        <div class="data">
+          <h4>end day</h4>
+          <p> {{conge.finCong}}</p>
+        </div>
+      </div>
+        
+        <br>
+        <br>
+        <div class="info_data">
+        <button class="btnS" data-toggle="modal1" data-target="#myModal1"
+            (click)="showModal1=true">Accept</button>
+
+            <div id="myModal1" class="modal fade" role="dialog" [ngClass]="{'show':showModal1}">
+              <div class="modal-dialog">
+            
+                
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" (click)="showModal1=false">&times;</button>
+                    <h4 class="modal-title"></h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>Do you want to agree to assign the vacation?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <div>
+                     
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                    (click)="onAcceptConge()"(click)="showModal1=false">Accept</button>
+                
+                    <button type="button" class="btn btn-default" data-dismiss="modal"
+                    (click)="showModal1=false">Cancel</button>
+                  </div>
+                  </div>
+                </div>
+
+                
+            
+              </div>
+            </div>
+
+
+        <button class="btnS" data-toggle="" data-target=""
+        (click)="showModal2=true">Refuse</button>
+
+        <div id="myModal2" class="modal fade" role="dialog" [ngClass]="{'show':showModal2}">
+          <div class="modal-dialog">
+        
+            
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" (click)="showModal2=false">&times;</button>
+                <h4 class="modal-title"></h4>
+              </div>
+              <div class="modal-body">
+                <p>Do you want to refuse to assign the vacation</p>
+              </div>
+              <div class="modal-footer">
+                <div>
+                 
+                <button type="button" class="btn btn-default" data-dismiss="modal"
+                (click)="onRefuseConge()"(click)="showModal2=false">Refuse</button>
+            
+                <button type="button" class="btn btn-default" data-dismiss="modal"
+                (click)="showModal2=false">Cancel</button>
+              </div>
+              </div>
+            </div>
+        
+          </div>
+        </div>
+
+        </div>
+      
+
+        
+    </div>
+  </div>
+            
+  
+    
+        
+    
+  </div>

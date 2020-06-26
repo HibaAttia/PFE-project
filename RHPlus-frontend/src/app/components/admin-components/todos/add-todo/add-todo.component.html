@@ -1,0 +1,35 @@
+
+
+
+<form class="form-horizontal style-form">
+  
+    <div class="form-group">
+      <label class="col-sm-2 col-sm-2 control-label" >Task to do</label>
+      <div class="col-sm-10">
+        <textarea type="text" [(ngModel)]="todo.description"  
+        name="description" id="description" placeholder="Task" rows="5" data-rule="required">
+        </textarea>
+        
+      </div>
+    </div>
+  
+    
+  </form>
+
+
+        <div class="click">
+          <button _ngcontent-roy-c3="" 
+                class="btn my-2 my-sm-0" 
+                type="submit" 
+                (click)="onSubmit()">Save</button>
+          <button _ngcontent-roy-c3="" 
+                class="btn  my-2 my-sm-0" 
+                type="submit" 
+                (click)="onClose()">Cancel</button>
+        
+        </div>
+
+
+
+
+

@@ -1,0 +1,50 @@
+
+<h3><i class="fa fa-angle-right"></i> Meetings </h3>
+<div _ngcontent-roy-c3="" >
+    
+    <br _ngcontent-roy-c3="">
+    
+    <button _ngcontent-roy-c3="" class="btn-meeting" type="submit" style="margin-left: 30%; width: 30%;" (click)="onAddNote()">Add a meeting</button>
+    <br><br><br>
+
+
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+    <table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
+    
+        <thead class="thead-inverse">
+        <tr>
+          <th>title</th>
+          <th>type</th>
+          <th>meeting Day</th>
+          <th>meeting Time</th>
+          <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let meeting of meetings" >
+                <td>{{meeting.titre}}</td>
+                <td>{{meeting.type}}</td>
+                <td>{{meeting.meetingDay}}</td>
+                <td>{{meeting.meetingTime}}</td>
+                
+                <td>
+                    <div class="container" >
+                    <button class="action-button btn-primary" (click)="updateMeeting(meeting)"><mat-icon>edit</mat-icon></button>
+                    <button class="action-button btn-danger" (click)="deleteMeeting(meeting)"><mat-icon>delete_outline</mat-icon></button>
+                    </div>
+
+                    
+                  
+              
+                </td>
+    
+               
+            </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+</div>
+
+

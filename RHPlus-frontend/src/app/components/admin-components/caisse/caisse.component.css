@@ -1,0 +1,172 @@
+
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.form-panel {
+    background: #ffffff;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 3px 2px #aab2bd;
+    text-align: left;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 24px;
+  }
+
+  textarea{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    
+}
+
+  input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    
+}
+
+div.container{
+    
+    border: 2px solid #4ECDC4;
+    border-radius: 5px 5px;
+    margin-top : -10px;
+    width: 900px;
+    box-shadow: 3px 3px 2px #aab2bd;
+    
+}
+
+div.container2{
+    
+    border: 2px solid #4ECDC4;
+    border-radius: 5px 5px;
+    margin-top : 20px;
+    margin-left: 320px;
+    
+    padding-top: 20px;
+    width: 400px;
+    box-shadow: 3px 3px 2px #aab2bd;
+    
+}
+
+.form-inline{
+    padding: 14px;
+}
+
+.btn-expense{
+    background-color: #4ECDC4;
+    margin-bottom: 3%;
+    margin-left: 35%;
+    top:80%;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px 5px;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+label{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+table{
+    position: absolute;
+    z-index: 2;
+    left: -10px;
+    top: 1px;
+    width: 600px; 
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-shadow: 0 2px 10px rgba(64,64,64,.7);
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+   
+   }
+   td , th{
+    padding: 15px 20px;
+    text-align: center;
+    font-size: 16px;
+    
+   
+   }
+   th{
+    background-color: #4ECDC4;
+    color: #fafafa;
+    font-family: 'Open Sans',Sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    width: 100px;
+   
+   }
+   tr{
+    width: 100%;
+    background-color: #fafafa;
+    font-family: 'Montserrat', sans-serif;
+   }
+   tr:nth-child(even){
+    background-color: #eeeeee;
+   }
+
+   .btn-delete{
+    background-color: #dc3545;
+    color: #fff;
+    width: 26px;
+    height: 26px;
+    margin : 2px;
+    font-size: 13px;
+    border-radius: 3px 3px;
+
+   }
+
+.info_data
+
+{
+  display: flex;
+  justify-content: space-between;
+  padding-left : 100px;
+  
+  
+  
+}
+
+p{
+    font-size: 30px;
+    margin-top: 3px;
+    color: grey;
+    text-align: center;
+}
+
+h4{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    margin-top: 3px;
+    
+}

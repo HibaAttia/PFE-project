@@ -1,0 +1,178 @@
+
+<div class="row mt" style="padding-top: 5%">
+    
+    
+
+    <div class="col-lg-6 col-md-6 col-sm-12" >
+      <!--  BASIC BUTTONS -->
+      <div class="showback">
+        <h4><i class="fa fa-angle-right"></i> Civility</h4>
+        <form class="form-horizontal style-form" style="margin-top: 5px;">
+        <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">First name
+            </label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="user.prenom" class="form-control" name="prenom" id="prenom" placeholder=""
+               minlength="3" [class.is-invalid]="prenom.invalid && prenom.touched"
+               #prenom="ngModel" required>
+
+              <div *ngIf="prenom.errors && (prenom.invalid || prenom.touched)">
+                <small class="text-danger" *ngIf="prenom.errors.required" [class.d-none]=" prenom.untouched" style="font-size: 11px;"> First name is required</small>
+                <small class="text-danger" *ngIf="prenom.errors.minlength" [class.d-none]=" prenom.untouched" style="font-size: 11px;"> First name must be at least 3 characters</small>
+                
+              </div>
+
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Last name</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="user.nom" class="form-control" name="nom" id="nom" placeholder=""
+              minlength="3" [class.is-invalid]="nom.invalid && nom.touched"
+               #nom="ngModel" required>
+               <div *ngIf="nom.errors && (nom.invalid || nom.touched)">
+                <small class="text-danger" *ngIf="nom.errors.required" [class.d-none]=" nom.untouched" style="font-size: 11px;"> Last name is required</small>
+                <small class="text-danger" *ngIf="nom.errors.minlength" [class.d-none]=" nom.untouched" style="font-size: 11px;"> Last name must be at least 3 characters</small>
+                
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Date of birth</label>
+            <div class="col-sm-10">
+              <input type="date" [(ngModel)]="user.dateOfBirth" class="form-control" name="dateOfBirth" id="dateOfBirth" placeholder=""
+              required
+          #dateOfBirth="ngModel"
+          [class.is-invalid]="dateOfBirth.invalid && dateOfBirth.touched">
+          <small class="text-danger" [class.d-none]="dateOfBirth.valid || dateOfBirth.untouched" style="font-size: 11px;">Date of birth is required</small>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="user.email" class="form-control" name="email" id="email" placeholder=""
+              required email
+              #email="ngModel"
+              [class.is-invalid]="email.invalid && email.touched">
+              <div *ngIf="email.errors && (email.invalid || email.touched)">
+                <small class="text-danger" *ngIf="email.errors.required" [class.d-none]=" email.untouched" style="font-size: 11px;"> Email is required</small>
+                <small class="text-danger" *ngIf="email.errors.email" [class.d-none]=" email.untouched" style="font-size: 11px;"> Email must be a valid email address</small>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Phone</label>
+            <div class="col-sm-10">
+              <input type="number" [(ngModel)]="user.phone" class="form-control" name="phone" id="phone" placeholder=""
+              required
+          minlength="8"
+          #phone="ngModel"
+          
+        
+          [class.is-invalid]="phone.invalid && phone.touched">
+          <div *ngIf="phone.errors && (phone.invalid || phone.touched)">
+            <small class="text-danger" *ngIf="phone.errors.required" [class.d-none]=" phone.untouched" style="font-size: 11px;"> Phone number is required</small>
+            <small class="text-danger" *ngIf="phone.errors.minlength" [class.d-none]=" phone.untouched" style="font-size: 11px;"> Phone number must be composed of 8 numbers</small>
+          </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">CV</label>
+            <div class="col-sm-10">
+                
+                    <div style="margin-top:3px">
+                   <input type="file" id="customFile" class="form-control" (change)="selectFileCV($event)" style="height:100%">
+                    </div>
+            
+            </div>
+          </div> 
+
+         <!--<div class="form-group">
+              <label for="file">File upload</label>
+              <input type="file" class="form-control" accept="image/*" (change)="onSelectFile($event)" style="height:100%">
+          </div>-->
+
+         <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Cover letter</label>
+            <div class="col-sm-10">
+                <div style="margin-top:3px">
+                    <input type="file" class="form-control" id="customFile" (change)="selectFileLettre($event)" style="height:100%" >
+                     </div>
+                   
+            </div>
+          </div>
+
+        </form>
+        
+      </div>
+      
+    </div>
+    <!-- /col-lg-6 -->
+    <div class="col-lg-6 col-md-6 col-sm-12">
+      <!--  BUTTONS SIZES -->
+      <div class="showback">
+        <h4><i class="fa fa-angle-right"></i> Study level </h4>
+        <form class="form-horizontal style-form" style="margin-top: 10px;">
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">Level</label>
+                <div class="col-sm-10">
+                  <input type="text" [(ngModel)]="user.niveauEtud" class="form-control" name="niveauEtud" id="niveauEtud" placeholder=""
+                  required  #niveauEtud="ngModel" [class.is-invalid]="niveauEtud.invalid && niveauEtud.touched">
+                  <small class="text-danger" [class.d-none]="niveauEtud.valid || niveauEtud.untouched" style="font-size: 11px;">Level is required</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">Diploma title </label>
+                <div class="col-sm-10">
+                  <input type="text" [(ngModel)]="user.titreDiplome" class="form-control" name="titreDiplome" id="titreDiplome" placeholder=""
+                  required  #titreDiplome="ngModel" [class.is-invalid]="titreDiplome.invalid && titreDiplome.touched">
+                  <small class="text-danger" [class.d-none]="titreDiplome.valid || titreDiplome.untouched" style="font-size: 11px;">Diploma title is required</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">Engineering school</label>
+                <div class="col-sm-10">
+                  <input type="text" [(ngModel)]="user.university" class="form-control" name="university" id="university" placeholder=""
+                  required  #university="ngModel" [class.is-invalid]="university.invalid && university.touched">
+                  <small class="text-danger" [class.d-none]="university.valid || university.untouched" style="font-size: 11px;">Engineering school is required</small>
+
+                </div>
+            </div>
+        </form>
+      </div>
+      <!-- /showback -->
+      <!-- BUTTON BLOCK -->
+      <div class="showback">
+        <h4><i class="fa fa-angle-right"></i> Experience</h4>
+        <form class="form-horizontal style-form" style="margin-top: 10px;">
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">Years experience</label>
+                <div class="col-sm-10">
+                  <input type="text" [(ngModel)]="user.niveauExp" class="form-control" name="niveauExp" id="niveauExp" placeholder=""
+                  required  #niveauExp="ngModel" [class.is-invalid]="niveauExp.invalid && niveauExp.touched">
+                  <small class="text-danger" [class.d-none]="niveauExp.valid || niveauExp.untouched" style="font-size: 11px;">Years of experience is required</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 col-sm-2 control-label">Your experiences</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" [(ngModel)]="user.experience" name="experience" id="experience" placeholder="" rows="4" data-rule="required" data-msg="Please write something for us"></textarea>
+                </div>
+            </div>
+
+        </form>
+        
+      </div>
+      <!--/showback -->
+      
+      <!-- DROPDOWN BUTTONS -->
+      
+        <button type="button" class="btn-save" style="margin-left: 200px"(click)="createCandidate()">Save</button>
+        
+        
+      
+      
+    </div>
+    <!-- /col-lg-6 -->
+  </div>

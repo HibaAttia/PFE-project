@@ -1,0 +1,120 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 58%;
+    
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 350px;
+    
+    display: flex;
+    box-shadow: 0 1px 20px 0 rgba(69,90,100,0.08);
+}
+
+h2{
+    font-size: 14px;
+    color: black;
+}
+
+.container .left{
+    width: 40%;
+    
+    background: rgb(122, 133, 133);
+     padding: 30px 25px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.container .right{
+    width: 60%;
+    background: #fff;
+    padding: 30px 25px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+#ui label{
+    color : black;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color : black;
+    font-family: 'Jost', sans-serif;
+    display: inline-block;
+    font-size: 24px;
+}
+
+.btnS{
+    background-color: #4ECDC4;
+   
+    margin: 10px;
+    top:80%;
+    width: 450px;
+    height: 30px;
+    border-radius: 5px 5px;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+input{
+    color : black;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+}
+
+h3 {
+    
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #fff;
+    font-size: 24px;
+}
+
+.h4{
+    margin-top: 3%;
+}
+.p{
+    margin-top: 2%;
+}
+
+.container .right .info_data
+
+{
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.container .right .info_data .data
+ {
+
+  width: 80%;
+}
+
+h5 {
+    
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-size: 24px;
+  }
+
+button{
+    font-size: 14px;
+    background-color: #4ECDC4;
+    
+}

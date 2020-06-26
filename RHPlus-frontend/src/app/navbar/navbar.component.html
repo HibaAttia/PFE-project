@@ -1,0 +1,50 @@
+
+ <!--header start-->
+ <header class="header black-bg">
+  <div class="sidebar-toggle-box">
+    <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+  </div>
+  <!--logo start-->
+  <a href="index.html" class="logo"><b>HR<span>Plus</span></b></a>
+  <!--logo end-->
+
+  <div class="nav notify-row" id="top_menu">
+   <!--  notification start -->
+   <ul class="nav top-menu" *ngIf="!isLoggedIn">
+     <!-- settings start -->
+     <li class="dropdown">
+       <a class="btn btn1" routerLink="/home">Home</a>
+      
+     </li>
+     <!-- settings end -->
+     <!-- inbox dropdown start-->
+     <li id="header_inbox_bar" class="dropdown">
+       <a class="btn btn2" routerLink="/candidat">Candidate area</a>
+       
+     </li>
+     
+   </ul>
+   <!--  notification end -->
+ </div>
+  
+  <div class="top-menu">
+
+   <ul class="nav pull-right top-menu" *ngIf="!isLoggedIn">
+
+
+     <li>
+       <a href="/register" class="logout" routerLink="/register">Sign Up</a>
+     </li>
+     <li>
+       <a href="/login" class="logout" routerLink="/login">Login</a>
+     </li>
+   </ul>
+
+   
+
+    <ul class="nav pull-right top-menu" *ngIf="isLoggedIn">
+      <li><a class="logout" (click)="logout()">Logout</a></li>
+    </ul>
+  </div>
+</header>
+<!--header end-->

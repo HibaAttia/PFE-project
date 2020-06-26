@@ -1,0 +1,114 @@
+<div class="container" >
+
+   
+        
+  <div class="row">
+
+      
+      <div class="col-lg-1"></div>
+
+      <div class="col-lg-10">
+          <div id="ui">
+              <form (ngSubmit)="processForm()">
+              <h3><i class="fa fa-angle-right"></i> Personal informations</h3>
+              <br>
+
+              <div class="row">
+                  <div class="col-lg-6">
+                      <label for="fname">First name</label>
+                      <input type="text" name="prenom" class="form-control" [(ngModel)]="employe.prenom">
+                  </div>
+
+                  <div class="col-lg-6">
+                      <label for="fname">Last name</label>
+                      <input type="text" name="nom" class="form-control" [(ngModel)]="employe.nom">
+                  </div>
+              </div>
+
+              <label for="fname">Email</label>
+              <input type="text" name="email" class="form-control" [(ngModel)]="employe.email">
+              
+              <div class="row">
+                  <div class="col-lg-6">
+                      <label for="fname">Date of birth</label>
+                      <input type="text" name="dateOfBirth" class="form-control" [(ngModel)]="employe.dateOfBirth">
+                  </div>
+
+                  <div class="col-lg-6">
+                      <label for="fname">Phone</label>
+                      <input type="text" name="phone" class="form-control" [(ngModel)]="employe.phone">
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="col-lg-8">
+                      <label for="fname">Address</label>
+                      <input type="text" name="adresse" class="form-control" [(ngModel)]="employe.adresse">
+                  </div>
+
+                  <div class="col-lg-4">
+                      <label for="fname">City</label>
+                      <input type="text" name="ville" class="form-control" [(ngModel)]="employe.ville">
+                  </div>
+              </div>
+
+
+             
+              <label for="fname">CIN</label>
+              <input type="text" name="cin" class="form-control" [(ngModel)]="employe.cin">
+             
+              <br>
+              <br>
+              <h3><i class="fa fa-angle-right"></i> Post</h3>
+              <br>
+
+              <div class="row">
+                  <div class="col-lg-6">
+                      <label for="fname">Department</label>
+                      <input type="text" name="departement" class="form-control" [(ngModel)]="employe.departement">
+                  </div>
+
+                  <div class="col-lg-6">
+                      <label for="fname">Fonction</label>
+                      <input type="text" name="fonction" class="form-control" [(ngModel)]="employe.fonction">
+                  </div>
+              </div>
+              <label for="fname">CNSS</label>
+              <input type="text" name="CNSS" class="form-control" [(ngModel)]="employe.cnss">
+              
+
+              <div class="row">
+                  <div class="col-lg-6">
+                      <label for="fname">Type of contract</label>
+                      <input type="text" name="typeContrat" class="form-control" [(ngModel)]="employe.typeContrat">
+                  </div>
+
+                  <div class="col-lg-6">
+                      <label for="fname">Salary</label>
+                      <input type="text" name="salary" class="form-control" [(ngModel)]="employe.salary">
+                  </div>
+              </div>
+
+              
+              <label for="fname">Entry date </label>
+              <input type="date" name="dateEntree" class="form-control" [(ngModel)]="employe.dateEntree">
+                  
+
+              <br>
+              <br>
+              <input type="submit" value="save" class="btn">
+
+          </form>
+          </div>
+
+      
+
+  </div>
+
+  <div class="col-lg-1"></div>
+
+  </div>
+  
+      
+  
+</div>

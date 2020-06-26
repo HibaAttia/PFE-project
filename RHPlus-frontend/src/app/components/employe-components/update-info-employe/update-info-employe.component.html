@@ -1,0 +1,115 @@
+<div class="container" >
+
+   
+        
+    <div class="row">
+
+        
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-10">
+            <div id="ui">
+                <form (ngSubmit)="processForm()">
+                <h3><i class="fa fa-angle-right"></i> Informations personnelles</h3>
+                <br>
+                    
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="fname">Prénom</label>
+                        <input type="text" name="prenom" class="form-control" [(ngModel)]="employe.prenom">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label for="fname">Nom</label>
+                        <input type="text" name="nom" class="form-control" [(ngModel)]="employe.nom">
+                    </div>
+                </div>
+
+                <label for="fname">email</label>
+                <input type="text" name="email" class="form-control" [(ngModel)]="employe.email">
+                
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="fname">Date de naissance</label>
+                        <input type="text" name="dateOfBirth" class="form-control" [(ngModel)]="employe.dateOfBirth">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label for="fname">Tél</label>
+                        <input type="text" name="phone" class="form-control" [(ngModel)]="employe.phone">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <label for="fname">Adresse</label>
+                        <input type="text" name="adresse" class="form-control" [(ngModel)]="employe.adresse">
+                    </div>
+
+                    <div class="col-lg-4">
+                        <label for="fname">Ville</label>
+                        <input type="text" name="ville" class="form-control" [(ngModel)]="employe.ville">
+                    </div>
+                </div>
+
+
+               
+                <label for="fname">CIN</label>
+                <input type="text" name="cin" class="form-control" [(ngModel)]="employe.cin">
+               
+                <br>
+                <br>
+                <h3><i class="fa fa-angle-right"></i> Poste</h3>
+                <br>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="fname">Département</label>
+                        <input type="text" name="departement" class="form-control" [(ngModel)]="employe.departement">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label for="fname">Fonction</label>
+                        <input type="text" name="fonction" class="form-control" [(ngModel)]="employe.fonction">
+                    </div>
+                </div>
+                <label for="fname">CNSS</label>
+                <input type="text" name="CNSS" class="form-control" [(ngModel)]="employe.cnss">
+                
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="fname">Type du contrat</label>
+                        <input type="text" name="typeContrat" class="form-control" [(ngModel)]="employe.typeContrat">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label for="fname">Salaire</label>
+                        <input type="text" name="salary" class="form-control" [(ngModel)]="employe.salary">
+                    </div>
+                </div>
+
+                
+                <label for="fname">Date d'entrée</label>
+                <input type="date" name="dateEntree" class="form-control" [(ngModel)]="employe.dateEntree">
+
+                
+                    
+                <br>
+                <br>
+                <input type="submit" value="save" class="btn">
+
+            </form>
+            </div>
+
+        
+
+    </div>
+
+    <div class="col-lg-1"></div>
+
+    </div>
+    
+        
+    
+  </div>

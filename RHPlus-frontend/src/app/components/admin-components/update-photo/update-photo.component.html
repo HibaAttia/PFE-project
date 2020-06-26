@@ -1,0 +1,36 @@
+<div class="container" >
+
+   
+        
+    <div class="row">
+  
+        
+        <div class="col-lg-1"></div>
+  
+        <div class="col-lg-10">
+            <div id="ui">
+                <form (ngSubmit)="processForm()">
+                <h3><i class="fa fa-angle-right"></i> Changer l'image de profil</h3>
+                <br>
+  
+                <label>   File Upload </label>
+                <input type="file" accept="image/*" (change)="onSelectFile($event)">
+            
+                <br>
+                <br>
+                <input type="submit" value="save" class="btn">
+  
+            </form>
+            </div>
+  
+        
+  
+    </div>
+  
+    <div class="col-lg-1"></div>
+  
+    </div>
+    
+        
+    
+  </div>

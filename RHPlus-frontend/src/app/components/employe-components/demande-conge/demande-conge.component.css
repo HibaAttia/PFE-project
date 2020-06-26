@@ -1,0 +1,52 @@
+.showback{
+    background-color:#4ECDC4 ;
+    box-shadow: 0 2px 10px rgba(64,64,64,.7);
+    border-radius: 12px 12px 12px 12px;
+}
+
+.btn-save{
+    width: 130px;
+    height: 30px;
+    margin : 15px;
+    font-size: 16px;
+    background-color: #0069d9;
+    color:white;
+    box-shadow: 0 2px 10px rgba(64,64,64,.7);
+    border-radius: 3px ;
+    font-family: 'Montserrat',Sans-serif;
+    right:80%;
+}
+
+label {
+   
+    font-family: 'Montserrat',Sans-serif;
+    font-size: 16px;
+    padding-top: 10px;
+    top:60%;
+    color: white;
+    
+}
+
+input {
+   
+    font-family: 'Montserrat',Sans-serif;
+    font-size: 16px; 
+}
+
+option {
+   
+    font-family: 'Montserrat',Sans-serif;
+    font-size: 16px; 
+}
+
+select {
+   
+    font-family: 'Montserrat',Sans-serif;
+    font-size: 16px; 
+}
+
+h4 {
+   
+    font-family: 'Montserrat',Sans-serif;
+    font-size: 20px; 
+}

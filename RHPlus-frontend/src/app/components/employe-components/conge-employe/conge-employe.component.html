@@ -1,0 +1,65 @@
+
+    <div _ngcontent-roy-c3="" >
+        <h3><i class="fa fa-angle-right"></i> Employee's vacations review</h3>
+        <div class ="solde">
+        <div class="info">
+          
+            <div class="info_data">
+              <div class="data">
+                <h4>Days of vacation : <p> {{user1.dureeConges}} days</p> </h4>
+            </div>
+                  <div class="data">
+                    <h4>spent days of vacation : <p> {{user1.joursConges}} days</p> </h4>
+                </div>
+                <div class="data">
+                  <h4>  remaining days of vacation : 
+                  <p> {{user1.soldeConges}} days</p> </h4>
+              </div>
+              
+            </div>
+            
+              
+              
+              
+          </div>
+    </div>
+
+</div>
+        <br _ngcontent-roy-c3="">
+       
+
+        <div class ="topp">
+        <h3><i class="fa fa-angle-right"></i> List of employee's vacations </h3>
+        <div class="row justify-content-center">
+        
+            <div class="col-md-6">
+        <table class="table table-striped card-body text" style="padding-left:50%;padding-right:10%">
+        
+            <thead class="thead-inverse">
+            <tr>
+              <th>Start day</th>
+              <th>End day</th>
+              <th>type</th>
+              <th>Period</th>
+              <th>Status</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let conge of conges" >
+                    <td>{{conge.debutCong}}</td>
+                    <td>{{conge.finCong}}</td>   
+                    <td>{{conge.typeCong}}</td>
+                    <td>{{conge.duree}}</td>
+                    <td>{{conge.statusOfDemand}}</td>
+                     
+                </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+        </div>
+        
+
+  

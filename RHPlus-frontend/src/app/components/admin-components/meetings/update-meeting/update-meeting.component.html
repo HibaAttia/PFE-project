@@ -1,0 +1,56 @@
+
+<div class="container" >
+
+   
+        
+    <div class="row">
+  
+        
+        <div class="col-lg-1"></div>
+  
+        <div class="col-lg-10">
+            <div id="ui">
+                <form (ngSubmit)="processForm()">
+                
+                <br>
+
+                <label for="fname">Titre</label>
+                <input type="text" name="titre" class="form-control" [(ngModel)]="meeting.titre">
+                <br>
+
+                <label for="fname">Type</label>
+                <select class="col-sm-12" id="type" name="type" [(ngModel)]="meeting.type" class="form-control" style="height: 30px;">
+                    <option value="internal meeting">internal meeting</option>
+                    <option value="external meeting">external meeting </option>
+              </select>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="fname">meeting day</label>
+                        <input type="date" name="meetingDay" class="form-control" [(ngModel)]="meeting.meetingDay">
+                    </div>
+  
+                    <div class="col-lg-6">
+                        <label for="fname">meeting time</label>
+                        <input type="time" name="meetingTime" class="form-control" [(ngModel)]="meeting.meetingTime">
+                    </div>
+                </div>
+
+              <br>
+              <br>
+              <input type="submit" value="save" class="btn">
+  
+            </form>
+            </div>
+  
+        
+  
+    </div>
+  
+    <div class="col-lg-1"></div>
+  
+    </div>
+    
+        
+    
+  </div>

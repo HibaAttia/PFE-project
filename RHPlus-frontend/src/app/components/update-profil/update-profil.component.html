@@ -1,0 +1,63 @@
+<div class="container" >
+
+   
+        
+    <div class="row">
+  
+        
+        <div class="col-lg-5">
+        <div id="ui">
+
+          <form (ngSubmit)="processForm()">
+          <h3><i class="fa fa-angle-right"></i> Edit your profile picture</h3>
+          <img src="http://localhost:8080/avatar/{{id}}" alt="user" width="150" class="img-circle">
+          
+            
+            <br>
+            <input class="select" type="file" accept="image/*" (change)="onSelectFile($event)">
+        
+            <br>
+            <br>
+            <input type="submit" value="save" class="btn-photo">
+
+        </form>
+
+        </div>
+      </div>
+        <div class="col-lg-7">
+            <div id="ui">
+                <form (ngSubmit)="updatePassword()">
+                <h3><i class="fa fa-angle-right"></i> Edit your password
+                </h3>
+                <br>
+                
+  
+
+                <label for="fname">Old password</label>
+              <input type="password" name="oldPassword" class="form-control" [(ngModel)]="oldPassword">
+
+                <label for="fname">New password</label>
+              <input type="password" name="newPassword" class="form-control" [(ngModel)]="newPassword">
+                        
+                      
+                    
+                  
+            
+                <br>
+                <br>
+                <input type="submit" value="save" class="btn">
+  
+            </form>
+            </div>
+  
+        
+  
+    </div>
+  
+    <div class="col-lg-1"></div>
+  
+    </div>
+    
+        
+    
+  </div>

@@ -1,0 +1,47 @@
+
+  <h3><i class="fa fa-angle-right"></i> Employees vacations review</h3>
+  
+  <div>
+    
+        <div >
+          <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"/> 
+        </div>
+      
+  <table class="table table-striped">
+
+    <thead class="thead-inverse">
+    <tr>
+      
+      <th>First & last name </th>
+      <th>Hiring date</th>
+      <th>Days of vacation </th>
+      <th>consumed days of vacation</th>
+      <th>remaining days of vacation </th>
+      
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employe of employees | filter:searchText | paginate: {itemsPerPage:7, currentPage: p}" >
+          
+            <td>{{employe.prenom}} {{employe.nom}}</td>
+            <td>{{employe.dateEntree}}</td>
+            <td>{{employe.dureeConges}}</td>
+            <td>{{employe.joursConges}}</td>
+            <td>{{employe.soldeConges}}</td>
+
+           
+        </tr>
+    </tbody>
+    
+  </table>
+  <div class="pagination">
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>
+
+
+
+
+
+   
+    

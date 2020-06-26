@@ -1,0 +1,57 @@
+<h3><i class="fa fa-angle-right"></i> List of candidates</h3>
+<div _ngcontent-roy-c3="" class="card-body bg-light">
+   
+   
+    <table class="table table-striped" style="margin-top: 2%;">
+  
+      <thead class="thead-inverse">
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>email</th>
+        <th>CV</th>
+        <th>action</th>
+      </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let candidate of candidats | paginate: {itemsPerPage: 4, currentPage: p}" >
+              <td>{{candidate.prenom}}</td>
+              <td>{{candidate.nom}}</td>
+              <td>{{candidate.email}}</td>
+              <td>{{candidate.pathCv}}
+                <a href="http://localhost:8080/downloadFile/{{candidate.pathCv}}"
+                class="cv"> <i class="fa fa-download"></i></a>
+
+              </td>
+              <td>
+                <button class="action-button btn-success" [routerLink]="['/profilCandidat', candidate.idUser]"><mat-icon>remove_red_eye</mat-icon></button>
+                <button class="action-button btn-danger" (click)="deleteTodo(candidate)"><mat-icon>delete_outline</mat-icon></button>
+                
+              </td>
+
+              <!-- <button mat-raised-button class="action-button btn-success" [routerLink]="['/profilEmploye', employe.idUser]"><mat-icon>
+                remove_red_eye
+
+              </mat-icon></button>
+              <button mat-raised-button class="action-button btn-primary" (click)="updateUser(employe)"><mat-icon>edit</mat-icon></button> 
+              <button mat-raised-button class="action-button btn-danger" (click)="archiveEmploye(employe)"><mat-icon>delete_outline</mat-icon></button>-->
+  
+          </tr>
+      </tbody>
+    </table>
+    <div class="pagination">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+  </div>
+ 
+  
+
+
+
+
+
+
+
+
+
+

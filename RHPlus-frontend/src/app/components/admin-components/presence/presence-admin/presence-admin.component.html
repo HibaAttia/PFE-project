@@ -1,0 +1,39 @@
+
+<h3><i class="fa fa-angle-right"></i> Timetracking</h3>
+
+  
+
+<div>
+    
+  <div >
+    <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText"/> 
+  </div>
+
+  <table class="table table-striped" width="100px">
+
+    <thead>
+    <tr>
+      <th></th>
+      <th></th>
+     
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employe of employees | filter:searchText | paginate: {itemsPerPage: 4, currentPage: p}" >
+          <td><img src="http://localhost:8080/avatar/{{employe.idUser}}" alt="user" 
+            width="80" class="img-circle" [routerLink]="['/presence-calendar', employe.idUser]">
+          </td>
+          <td> {{employe.prenom}} {{employe.nom}} </td> 
+            
+
+           
+        </tr>
+    </tbody>
+  </table>
+  <div class="pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+
+  </div>
+  
+  

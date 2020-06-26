@@ -1,0 +1,85 @@
+<form class="form-login">
+  <div class="card card-container">
+    <h2 class="form-login-heading">sign in now</h2>
+    
+    <form
+      *ngIf="!isLoggedIn"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
+    <div class="login-wrap">
+      <div>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          [(ngModel)]="form.username"
+          required
+          minlength="3"
+          maxlength="20"
+          #username="ngModel"
+          placeholder="Username" autofocus=""
+          [class.is-invalid]="username.invalid && username.touched"
+        />
+        <div *ngIf="username.errors && (username.invalid || username.touched)">
+          <small class="text-danger" *ngIf="username.errors.required" [class.d-none]=" username.untouched" style="font-size: 11px;"> Username is required</small>
+          <small class="text-danger" *ngIf="username.errors.minlength" [class.d-none]=" username.untouched" style="font-size: 11px;"> Username must be at least 3 characters</small>
+          <small class="text-danger" *ngIf="username.errors.maxlength" [class.d-none]=" username.untouched" style="font-size: 11px;"> Username must be at most 20 characters</small>
+        </div>
+        
+      </div>
+      <br>
+      <div>
+        
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          minlength="6"
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"
+          placeholder="Password"
+        />
+
+        <div *ngIf="password.errors && (password.invalid || password.touched)">
+          <small class="text-danger" *ngIf="password.errors.required" [class.d-none]=" password.untouched" style="font-size: 11px;"> Password is required</small>
+          <small class="text-danger" *ngIf="password.errors.minlength" [class.d-none]=" password.untouched" style="font-size: 11px;"> Password must be at least 6 characters</small>
+        </div>
+
+        
+      </div>
+      <div>
+      <div>
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me"><h3> Remember me</h3>
+        
+        </label>
+      </div>
+      </div>
+      <div>
+        <button class="btn btn-theme btn-block" (click)="onSubmit()" type="button">
+          <i class="fa fa-lock"></i> LOGIN
+        </button>
+      </div>
+        <hr>
+    
+      
+      <div class="form-group">
+        <div
+          class="alert alert-danger"
+          role="alert"
+          *ngIf="f.submitted && isLoginFailed"
+        >
+          Login failed: {{ errorMessage }}
+        </div>
+      </div>
+    </div>
+    </form>
+
+    
+  </div>
+</form>

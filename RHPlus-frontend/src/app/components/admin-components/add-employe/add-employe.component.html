@@ -1,0 +1,162 @@
+<div class="row mt">
+
+
+  <div class="col-lg-4" style="margin-top: 10%;">
+    <div class="form-panel">
+      <h4 class="mb"><i class="fa fa-angle-right"></i> Image</h4>
+      <img src="assets/img/worker.png" class="img-circle" width="180" style="margin-left:38px ">
+      <form class="form-horizontal style-form">
+        <div style="margin-left:80px">
+         <div style="margin-top:15px">
+          <input type="file" id="customFile" class="form-control" (change)="selectFileImage($event)" style="height:100%">
+      </div>
+        </div>
+        <!--<div  style="margin-left:110px">
+        <div style="margin-top:10px">
+<button style = "margin-left: -10px;"class="btn btn-primary" [disabled]="!selectedFiles || admincheck || status" (click)="upload()">Save File</button>
+<button class="btn btn-primary" style="margin-left: 10px" (click)="downloadFile()">View File</button>
+        </div>
+      </div>-->
+      </form> 
+    </div>
+  </div>
+  <div class="col-lg-8" >
+      <div class="form-panel">
+        <h4 class="mb"><i class="fa fa-angle-right"></i> Informations personnelles</h4>
+        <form class="form-horizontal style-form">
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Prénom</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="user.prenom" class="form-control" name="prenom" id="prenom" placeholder="prenom">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Nom</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="user.nom" class="form-control" name="nom" id="nom" placeholder="nom" >
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">BirthDay</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" name="birth" id="birth" placeholder="BirthDay" >
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Téléphone</label>
+            <div class="col-sm-10">
+              <input class="form-control" [(ngModel)]="user.phone" type="number" name="phone" id="phone" placeholder="phone">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">email</label>
+            <div class="col-sm-10">
+              <input type="text" [(ngModel)]="user.email" class="form-control" name="email" id="email" placeholder="email">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 col-sm-2 control-label">Adresse</label>
+            <div class="col-sm-10">
+              <input type="password" [(ngModel)]="user.adresse" class="form-control" name="adresse" id="adresse" placeholder="adresse" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-sm-2 control-label">Ville</label>
+            <div class="col-lg-10">
+              <input type="Ville" [(ngModel)]="user.ville" class="form-control" name="ville" id="ville" placeholder="ville">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-sm-2 control-label">CIN</label>
+            <div class="col-lg-10">
+              <input type="number" [(ngModel)]="user.cin" class="form-control" name="cin" id="cin" placeholder="cin" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-lg-2 col-sm-2 control-label">CNSS</label>
+            <div class="col-lg-10">
+              <input type="CNSS" [(ngModel)]="user.CNSS" class="form-control" name="CNSS" id="CNSS" placeholder="CNSS">
+            </div>
+          </div>
+           <!-- <div class="form-group">
+            <label class="col-lg-2 col-sm-2 control-label">Photo</label>
+            <div class="col-lg-10">
+              <div>
+                <input type="file" (change)="onFileChanged($event)">
+                <img [src]="imgURL" height="200" *ngIf="imgURL">
+              </div>
+              <input type="button" (click)="onUpload()" value="upload">
+              <hr />
+              <img [src]="convertedImage" >
+            </div>
+          </div> -->
+        </form>
+      </div>
+    </div>
+  </div>
+
+    
+  <div class="row mt">
+  <div class="col-lg-8" style="margin-left:330px" >
+        <div class="form-panel">
+          <h4 class="mb"><i class="fa fa-angle-right"></i> Poste</h4>
+          <form class="form-horizontal style-form">
+            <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Département</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="user.departement" class="form-control" name="departement" id="departement" placeholder="departement">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Fonction</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="user.fonction" class="form-control" name="fonction" id="fonction" placeholder="fonction">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Type de contrat</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="user.typeContrat" class="form-control" name="typeContrat" id="typeContrat" placeholder="typeContrat">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Date d'entrée</label>
+              <div class="col-sm-10">
+                <input class="form-control" [(ngModel)]="user.dateEntree" type="date" name="dateEntree" id="dateEntree" placeholder="dateEntree">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Salaire de base</label>
+              <div class="col-sm-10">
+                <input class="form-control" [(ngModel)]="user.salary" type="number" name="salary" id="salary" placeholder="salary" >
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Cout des heures suplémentaires</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="user.coutHeuresSup" class="form-control" name="coutHeuresSup" id="coutHeuresSup" placeholder="coutHeuresSup" >
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 col-sm-2 control-label">Congès consommés</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="user.dureeConges" class="form-control" name="dureeConges" id="dureeConges" placeholder="dureeConges">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row" style="margin-left: 550px;">  
+        <div class="col-lg-12">  
+          <button class="btn-save" (click)="createEmploye()">Enregistrer</button>  
+        </div>  
+      </div>  
+
+  
+      
+    <!-- col-lg-12-->
+  </div>

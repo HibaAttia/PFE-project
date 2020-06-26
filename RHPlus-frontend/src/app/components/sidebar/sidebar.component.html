@@ -1,0 +1,229 @@
+  
+  <div>
+    <section id="container">
+     
+    <app-navbar></app-navbar>
+
+  <aside *ngIf="isLoggedIn">
+    
+    <div id="sidebar" class="nav-collapse nicescroll-rails" tabindex="5000" style="overflow-y: scroll;  
+    outline: none; margin-left: 0px;
+    z-index: 1;
+    /* overflow-x: hidden; */
+    
+    " > <!-- *ngIf="isLoggedIn";-->
+      
+      <!-- sidebar menu start-->
+      <ul class="sidebar-menu" id="nav-accordion">
+        <p class="centered"><a><img src="http://localhost:8080/avatar/{{id}}" class="img-circle" width="80" routerLink ="/profil" *ngIf="img"></a>
+          <a><img src="../../../assets/img/avatar.jpg" class="img-circle" width="80" routerLink ="/profil" *ngIf="!img"></a></p>
+        <h5 class="centered"><h2>{{username}}</h2></h5>
+
+        <li class="mt">
+          <a routerLink ="/dashboard" >
+            <i class="fa fa-tachometer" aria-hidden="true"></i>
+            <span>Dashboard</span>
+            </a>
+        </li>
+
+       
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showUserBoard" >
+          <a href="javascript:;">
+            <i class="fa fa-user"></i>
+            <span [routerLink] ="['/info-employe', id]">Employee profile</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showUserBoard" >
+          <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span routerLink ="/profil">Settings
+            </span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+        
+
+        <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showAdminBoard" >
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;width: 30px;">
+                <i class="fa fa-group"></i>  <span style="margin-left: 7px;">Employees</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+        
+            <div class="vacation-sub-menu">
+              <li><a style= "margin-bottom:-10px"routerLink ="/listEmployes"><i class="fa fa-book"></i> List of employees</a></li>
+              <li><a routerLink ="/archivedEmployes"><i class="fa fa-group"></i>Archived Employees</a></li>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+
+        <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showAdminBoard" >
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
+                <i class="fa fa-desktop"></i>  <span style="margin-left: 7px;">Vacations</span>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+        
+            <div class="vacation-sub-menu">
+              <li><a style= "margin-bottom:-10px"routerLink ="/bilan-conges"><i class="fa fa-book"></i> Review of vacations</a></li>
+              <li><a routerLink ="/list-conges"><i class="fa fa-edit"></i>Requests for vacations</a></li>
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+        
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard"> <!--*ngIf="showAdminBoard"-->
+          <a href="javascript:;">
+            <i class="fa fa-group"></i>
+            <span routerLink ="/meetings">Meetings</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+          <a href="javascript:;">
+            <i class="fa fa-briefcase"></i>
+            <span routerLink ="/recrutement" >Recruitment</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        
+      
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+          <a href="javascript:;">
+            <i class="fa fa-tasks"></i>
+            <span routerLink ="/todoList">Todo List</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+          <a href="javascript:;">
+            <i class="fa fa-money"></i>
+            <span routerLink ="/caisse">Budget</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+          <a href="javascript:;">
+            <i class="fa fa-calendar-o"></i>
+            <span routerLink ="/presence">Timetracking</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        <!--<li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+          <a href="javascript:;">
+            <i class="fa fa-calendar-o"></i>
+            <span routerLink ="/timetracking">Time tracking</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>-->
+
+        <!--<li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+          <a href="javascript:;">
+            <i class="fa fa-calendar"></i>
+            <span routerLink ="/holiday-calendar">Calendrier des congés</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>-->
+
+        <!--<li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showUserBoard">
+          <a href="javascript:;" >
+            <i class="fa fa-beer"></i>
+            <span routerLink ="/demandeConge">Demande congé</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>-->
+
+        <mat-accordion class="sidebar" routerLinkActive = "active" *ngIf="showUserBoard" >
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title style="margin-left: -7%;margin-bottom: -3px;">
+                <i class="fa fa-desktop"></i> <span style="margin-left: 7px;">Vacations</span> 
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+        
+            <div class="vacation-sub-menu">
+              <li><a routerLink ="/demandeConge">Request for a vacation</a></li>
+              <li><a routerLink ="/conge-employe">My vacations</a></li>
+              
+            </div>
+          </mat-expansion-panel>
+        </mat-accordion>
+
+        
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showUserBoard" >
+          <a href="javascript:;">
+            <i class="fa fa-calendar-o"></i>
+            <span [routerLink] ="['/presence-calendar', id]">Timetracking</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+        
+
+        
+
+        
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard">
+          <a href="javascript:;"  >
+            <i class="fa fa-bell"></i>
+            <span routerLink ="/notesInternes" >Announcements</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showUserBoard">
+          <a href="javascript:;"  >
+            <i class="fa fa-bell"></i>
+            <span routerLink ="/employe-notesInternes" >Announcements</span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        <li class="sub-menu dcjq-parent-li" routerLinkActive = "active" *ngIf="showAdminBoard" >
+          <a href="javascript:;">
+            <i class="fa fa-cogs"></i>
+            <span routerLink ="/profil">Settings
+            </span>
+            <span class="dcjq-icon"></span></a>
+    
+        </li>
+
+        
+
+
+        
+
+        
+      </ul>
+      <!-- sidebar menu end-->
+    </div>
+  </aside>
+  <!--sidebar end-->
+
+  <section id="main-content">
+    <section class="wrapper">
+
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
+      </section>
+      </section>
+
+  </section>
+
+  </div>
+
+
+  

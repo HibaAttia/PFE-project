@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <full-calendar
+    (dayRender)="dayRender($event)"
+    
+    [editable]= "true"
+    [eventLimit]="false"
+    
+    [events]="calendarEvents"
+    
+    
+     [plugins]="calendarPlugins"></full-calendar>
+    </div>  

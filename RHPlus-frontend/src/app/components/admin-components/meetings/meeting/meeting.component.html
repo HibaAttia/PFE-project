@@ -1,0 +1,60 @@
+
+<form class="form-horizontal style-form">
+  <div class="container">
+    <div class="form-group">
+      <label class="col-sm-2 col-sm-2 control-label" >Title</label>
+      <div class="col-sm-10">
+        <input type="text" [(ngModel)]="meeting.titre" name="titre" id="titre" placeholder="titre">
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-sm-2 col-sm-2 control-label" >Type</label>
+      <div class="col-sm-10">
+
+
+        
+      <select class="col-sm-12" id="type" name="type" [(ngModel)]="meeting.type" class="form-control" style="height: 30px;" placeholder="type">
+            <option value="internal meeting">internal meeting</option>
+            <option value="external meeting">external meeting </option>
+      </select>
+       
+      
+      </div>
+    </div>
+  </div>
+    <div class="container2">
+    <form class="form-inline" role="form">
+    
+      <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label"  >Meeting day</label>
+        <div class="col-sm-10">
+        <input type="date" [(ngModel)]="meeting.meetingDay" name="meetingDay" class="form-control" id="meetingDay" placeholder="meetingDay">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-2 col-sm-2 control-label">Meeting time</label>
+        <div class="col-sm-10">
+        <input type="time" [(ngModel)]="meeting.meetingTime" name="meetingTime" class="form-control" id="meetingTime" placeholder="meetingTime">
+      </div>
+      </div>
+    
+     
+    </form>
+  </div>
+
+    
+  </form>
+
+
+  <div class="click">
+  <button _ngcontent-roy-c3="" 
+        class="btn my-2 my-sm-0" 
+        type="submit" 
+        (click)="onSubmit()">Save</button>
+  <button _ngcontent-roy-c3="" 
+        class="btn  my-2 my-sm-0" 
+        type="submit" 
+        (click)="onClose()">Cancel</button>
+
+</div>
+  

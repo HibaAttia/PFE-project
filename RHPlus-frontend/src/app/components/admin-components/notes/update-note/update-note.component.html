@@ -1,0 +1,42 @@
+
+<div class="container" >
+
+   
+        
+    <div class="row">
+  
+        
+        <div class="col-lg-1"></div>
+  
+        <div class="col-lg-10">
+            <div id="ui">
+                <form (ngSubmit)="processForm()">
+                
+                <br>
+
+                <label for="fname">Titre</label>
+                <input type="text" name="title" class="form-control" [(ngModel)]="noteInterne.title">
+                <br>
+
+                <label for="fname">Body</label>
+                <editor  name="content" class="form-control" [(ngModel)]="noteInterne.content" [init]="{plugins: 'link'}"></editor>
+
+
+              <br>
+              <br>
+              <input type="submit" value="save" class="btn">
+  
+            </form>
+            </div>
+  
+        
+  
+    </div>
+  
+    <div class="col-lg-1"></div>
+  
+    </div>
+    
+        
+    
+  </div>
